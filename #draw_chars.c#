@@ -21,8 +21,7 @@ void print_char_8x12(char c)
 for (char row = 0; row < 12; row++) {
     unsigned short rowBits = font_8x12[c][row];      
   for (char col = 0; col < 8; col++){
-    unsigned short mask = 1<<(7-col);      
-     
+    unsigned short mask = 1 << (7-col);      
    putchar((rowBits & mask) ? '*' : ' ');
     }
     putchar('\n');
